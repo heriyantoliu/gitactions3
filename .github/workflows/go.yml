@@ -23,5 +23,5 @@ jobs:
         run: go build -o simpleServer.exe
 
       - name: Start Process
-        run: start ./simpleServer.exe
+        run: start /B ./simpleServer.exe
         shell: cmd
