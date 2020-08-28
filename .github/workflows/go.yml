@@ -21,9 +21,7 @@ jobs:
 
       - name: Build Artifacts
         run: go build -o simpleServer.exe
-        continue-on-error: true
 
       - name: Start Process
         run: start ./simpleServer.exe
         shell: cmd
-        continue-on-error: true
