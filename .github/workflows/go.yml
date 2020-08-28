@@ -23,5 +23,4 @@ jobs:
         run: go build -o simpleServer.exe
 
       - name: Start Process
-        run: ./simpleServer.exe
-        timeout-minutes: 1
+        run: ./run.bat
