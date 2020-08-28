@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -21,6 +22,7 @@ var data = []student{
 
 func users(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	log.Println("/USERS")
 
 	if r.Method == "POST" {
 		var result, err = json.Marshal(data)
@@ -39,6 +41,8 @@ func users(w http.ResponseWriter, r *http.Request) {
 
 func user(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+
+	log.Println("/USER")
 
 	if r.Method == "POST" {
 		var id = r.FormValue("id")
