@@ -13,14 +13,3 @@ jobs:
 
       - name: Checkout Code
         uses: actions/checkout@v1
-
-      - name: Kill Running Process
-        run: taskkill /IM "simpleServer.exe" /F
-        shell: cmd
-        continue-on-error: true
-
-      - name: Build Artifacts
-        run: go build -o simpleServer.exe
-
-      - name: Start Process
-        run: ./run.bat
